@@ -23,12 +23,14 @@ df.plot(kind='bar', x='name', y='age')
 plt.show()
 
 # 3. gca stands for 'get current axis'
+plt.clf()
 ax = plt.gca()
 df.plot(kind='line', x='name', y='num_children', ax=ax)
 df.plot(kind='line', x='name', y='num_pets', color='red', ax=ax)
 plt.show()
 
 # 4. Bar plot with group by
+plt.clf()
 df.groupby('state')['name'].nunique().plot(kind='bar')
 plt.show()
 
